@@ -55,10 +55,30 @@ public class Main {
         profileService.insertProfile(profile5);
     }
 
+    public void insertTutors(){
+        ProfileService profileService = new ProfileService();
+
+        User user5 = new User("Stellasie", "Shiraazm", "6245533" );
+        user5.setInterest("Java, Continuous Integration");
+        user5.setRole("Tutor");
+
+        Profile profile5 = new Profile(user5);
+        profileService.insertProfile(profile5);
+
+        User user6 = new User("Shane", "Shiraazm", "6245533" );
+        user6.setInterest("Scrum Master, Angular");
+        user6.setRole("Tutor");
+
+        Profile profile6 = new Profile(user6);
+        profileService.insertProfile(profile6);
+    }
+
     public static void main(String[] args) {
-        //Main main = new Main();
-        //main.insertMockData();
-        SpringApplication.run(Main.class, args);
+        Main main = new Main();
+//        main.insertMockData();
+        main.insertTutors();
+//        SpringApplication.run(Main.class, args);
+
     }
 
 }
