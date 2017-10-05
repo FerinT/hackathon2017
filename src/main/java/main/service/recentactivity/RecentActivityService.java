@@ -8,6 +8,7 @@ import org.kohsuke.github.GHEventInfo;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Created by tayfer01 on 10/5/2017.
@@ -36,5 +37,17 @@ public class RecentActivityService {
         githubActivity(user.getGithubUsername());
         // add stackoverflow
         return recentActivityList;
+    }
+
+
+    public String calculateReputationPoints(String username)throws Exception{
+        ghEventInfoList = githubService.getActivity(username);
+        Random rand = new Random();
+        int numberOfProjectCompleted = rand.nextInt(20) + 1;
+        int numberOfTotalActivity = ghEventInfoList.size();
+
+        int reputationPoints = (numberOfProjectCompleted * 2 / 3) + (numberOfTotalActivity * 2 / 5);
+
+        return reputationPoints + "";
     }
 }

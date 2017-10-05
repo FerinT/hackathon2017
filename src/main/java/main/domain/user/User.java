@@ -12,12 +12,21 @@ public class User {
     private String school;
     private String interest;
     private String role;
+    private String reputationPoints;
 
     // promotes them to open these accounts
     public User(String name, String githubUsername, String stackoverflowLink) {
         this.name = name;
         this.githubUsername = githubUsername;
         this.stackoverflowLink = stackoverflowLink;
+    }
+
+    public String getReputationPoints() {
+        return reputationPoints;
+    }
+
+    public void setReputationPoints(String reputationPoints) {
+        this.reputationPoints = reputationPoints;
     }
 
     public String getRole() {
