@@ -38,4 +38,28 @@ public class ProfileController {
 
     }
 
+    @CrossOrigin
+    @RequestMapping(path = "/profiles/tutors")
+    public List<Profile> getTutors() {
+        List<Profile> result = new ArrayList<Profile>();
+
+        result.add(new Profile(getUserWith("Brandon", "https://github.com/ShiraazMoollatjie", "https://stackoverflow.com/users/761035/shiraaz-m", "mllshi011@gmail.com", "Java")));
+        result.add(new Profile(getUserWith("Ferin", "https://github.com/ShiraazMoollatjie", "https://stackoverflow.com/users/761035/shiraaz-m", "mllshi011@gmail.com", "Java")));
+
+        return result;
+    }
+
+    private User getUserWith(String name, String githubLink, String stackoverflowLink, String emailAddress, String interest) {
+        final User result = new User(
+                name,
+                githubLink,
+                stackoverflowLink);
+
+        result.setEmailAddress(emailAddress);
+        result.setId(result.getName());
+        result.setInterest(interest);
+
+        return result;
+    }
+
 }
