@@ -1,13 +1,10 @@
 package main.controller.profile;
 
 import main.domain.profile.Profile;
-import main.domain.user.User;
 import main.service.profile.ProfileService;
-import main.service.recentactivity.github.GithubService;
 import org.springframework.web.bind.annotation.*;
 
-import java.io.IOException;
-import java.util.ArrayList;
+
 import java.util.List;
 
 /**

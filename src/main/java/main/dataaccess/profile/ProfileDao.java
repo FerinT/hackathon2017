@@ -31,7 +31,6 @@ public class ProfileDao {
     }
 
     public Profile findProfile(String profileId) {
-
         Query query2 = new Query();
         query2.addCriteria(Criteria.where("user.userId").is(profileId));
         return template.findOne(query2, Profile.class, Variables.STUDENT_COLLECTION);
