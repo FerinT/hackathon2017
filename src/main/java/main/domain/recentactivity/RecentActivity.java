@@ -8,6 +8,28 @@ import main.domain.recentactivity.stackoverflow.Stackoverflow;
  */
 public class RecentActivity {
 
-    private Github github;
-    private Stackoverflow stackoverflow;
+    private String information;
+    private String url;
+
+
+    public RecentActivity(String information, String url) {
+        this.information = information;
+        this.url = url;
+    }
+
+    public String getInformation() {
+        return information;
+    }
+
+    public void setInformation(String information) {
+        this.information = information;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
 }

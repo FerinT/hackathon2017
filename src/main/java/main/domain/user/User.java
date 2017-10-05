@@ -6,7 +6,7 @@ package main.domain.user;
 public class User {
     private String id;
     private String name;
-    private String githubLink;
+    private String githubUsername;
     private String stackoverflowLink;
     private String emailAddress;
     private String school;
@@ -15,7 +15,7 @@ public class User {
     // promotes them to open these accounts
     public User(String name, String githubLink, String stackoverflowLink) {
         this.name = name;
-        this.githubLink = githubLink;
+        this.githubUsername = githubLink;
         this.stackoverflowLink = stackoverflowLink;
     }
 
@@ -59,12 +59,12 @@ public class User {
         this.name = name;
     }
 
-    public String getGithubLink() {
-        return githubLink;
+    public String getGithubUsername() {
+        return githubUsername;
     }
 
-    public void setGithubLink(String githubLink) {
-        this.githubLink = githubLink;
+    public void setGithubUsername(String githubUsername) {
+        this.githubUsername = githubUsername;
     }
 
     public String getStackoverflowLink() {

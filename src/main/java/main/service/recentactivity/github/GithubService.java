@@ -14,7 +14,7 @@ import java.util.List;
 public class GithubService {
 
     private GHUser ghUser;
-    GitHub github;
+    private GitHub github;
 
     public List<GHEventInfo> getActivity(String username) throws IOException {
         github = GitHub.connectAnonymously();

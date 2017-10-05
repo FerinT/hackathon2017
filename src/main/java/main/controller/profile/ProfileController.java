@@ -19,12 +19,8 @@ public class ProfileController {
     @CrossOrigin
     @RequestMapping(path = "/profile/student")
     public Profile getProfile(@RequestParam(value = "id") String id) {
-        GithubService githubService = new GithubService();
-        try {
-            githubService.getActivity();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
+
         return new Profile(new User("hey", "hey", "hey"));
     }
 
