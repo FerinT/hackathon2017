@@ -74,10 +74,10 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Main main = new Main();
+//        Main main = new Main();
 //        main.insertMockData();
-        main.insertTutors();
-//        SpringApplication.run(Main.class, args);
+//        main.insertTutors();
+        SpringApplication.run(Main.class, args);
 
     }
 

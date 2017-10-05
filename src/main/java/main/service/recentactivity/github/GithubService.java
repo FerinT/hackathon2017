@@ -1,6 +1,5 @@
 package main.service.recentactivity.github;
 
-import org.kohsuke.github.GHEvent;
 import org.kohsuke.github.GHEventInfo;
 import org.kohsuke.github.GHUser;
 import org.kohsuke.github.GitHub;
@@ -20,7 +19,10 @@ public class GithubService {
         github = GitHub.connectAnonymously();
         ghUser = github.getUser(username);
 
-        return  ghUser.listEvents().asList().subList(0,10);
+        if (ghUser.listEvents().asList().size() > 10)
+            return ghUser.listEvents().asList().subList(0, 10);
+        else
+            return ghUser.listEvents().asList();
     }
 
 }

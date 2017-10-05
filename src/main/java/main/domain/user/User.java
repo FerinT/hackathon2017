@@ -4,7 +4,7 @@ package main.domain.user;
  * Created by tayfer01 on 10/5/2017.
  */
 public class User {
-    private String id;
+    private String userId;
     private String name;
     private String githubUsername;
     private String stackoverflowLink;
@@ -52,12 +52,12 @@ public class User {
         this.emailAddress = emailAddress;
     }
 
-    public String getId() {
-        return id;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public String getName() {
