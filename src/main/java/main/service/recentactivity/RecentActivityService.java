@@ -50,7 +50,7 @@ public class RecentActivityService {
         recentActivityList = new LinkedList<>();
         githubActivity(user.getGithubUsername());
         // add stackoverflow
-        stackActivity("");
+        //stackActivity("");
         return recentActivityList;
     }
 

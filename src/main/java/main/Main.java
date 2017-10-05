@@ -109,10 +109,14 @@ public class Main {
         tipOfTheDay.setTipText("Make use of Dockerfiles\n" +
                 "Deploying a Docker container can get really cumbersome because the commands are often unwieldy (and a serious challenge to remember). Instead of working from the command line, you should be making use of Dockerfiles. A Dockerfile is a short recipe that describes the files, environment, and commands that make up an image. Once you've created the Dockerfile, it can be easily used with a command like: docker build -t dockerfilename .");
 
+        service.insertDailyTip(tipOfTheDay);
+
         tipOfTheDay = new TipOfTheDay();
         tipOfTheDay.setTheme("Docker");
         tipOfTheDay.setTipText("Running Docker without root (or sudo)\n" +
                 "By default, the Docker command can only be run by root or with the help of sudo. You might have users that need to run Docker, but don't have access to the root user. For that, you need to add those users to the Docker group with the following commands: sudo gpasswd -a USERNAME docker");
+
+        service.insertDailyTip(tipOfTheDay);
 
         tipOfTheDay = new TipOfTheDay();
         tipOfTheDay.setTheme("Docker");
@@ -124,8 +128,7 @@ public class Main {
                 "\u200Balias dl='docker ps -l -q'\n" +
                 "Now you only would have to remember the aliases drm, dps, and dl. A much easier route to working with Docker.");
 
-
-
+        service.insertDailyTip(tipOfTheDay);
     }
 
     public static void main(String[] args) {
@@ -133,6 +136,7 @@ public class Main {
 //      main.insertMockData();
 //      main.insertTutors();
 //      main.insertProject();
+//        main.insertDailyTips();
         SpringApplication.run(Main.class, args);
 
     }

@@ -10,5 +10,10 @@ public class Variables {
 
     public static final String STUDENT = "student";
     public static final String PROJECT = "project";
+
+
+    // badges
     public static final String ARCHITECT = "architect";
+    public static final String DTM = "Delivery team manager";
+
 }
