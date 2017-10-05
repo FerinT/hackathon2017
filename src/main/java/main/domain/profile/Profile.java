@@ -23,4 +23,12 @@ public class Profile {
     public void setUser(User user) {
         this.user = user;
     }
+
+    public List<RecentActivity> getRecentActivity() {
+        return recentActivity;
+    }
+
+    public void setRecentActivity(List<RecentActivity> recentActivity) {
+        this.recentActivity = recentActivity;
+    }
 }

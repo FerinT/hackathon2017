@@ -2,6 +2,7 @@ package main.controller.profile;
 
 import main.domain.profile.Profile;
 import main.domain.user.User;
+import main.service.profile.ProfileService;
 import main.service.recentactivity.github.GithubService;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,30 +17,25 @@ import java.util.List;
 @RestController
 public class ProfileController {
 
+    ProfileService profileService = new ProfileService();
+
     @CrossOrigin
     @RequestMapping(path = "/profile/student")
-    public Profile getProfile(@RequestParam(value = "id") String id) {
+    public Profile getProfile(@RequestParam(value = "id") String id) throws Exception {
 
-
-        return new Profile(new User("hey", "hey", "hey"));
+        return profileService.findProfile(id);
     }
 
     @CrossOrigin
     @RequestMapping(path = "/profiles/students")
     public List<Profile> getProfiles() {
-        List<Profile> profileList = new ArrayList<Profile>();
-
-        profileList.add(new Profile(new User("hey", "hey", "hey")));
-        profileList.add(new Profile(new User("hey", "hey", "hey")));
-
-        return profileList;
+       return profileService.findAllProfiles();
     }
 
     @CrossOrigin
     @RequestMapping(path = "/createProfile/student/", method = RequestMethod.POST)
     public void insertProfile(@RequestBody Profile profile) {
-
-
+        
     }
 
 }
