@@ -5,6 +5,4 @@ package main.profile;
  */
 public class ProfileTest {
 
-   // private User user;
-
 }

@@ -1,13 +1,10 @@
 package main.dataaccess.profile;
 
-import com.mongodb.Mongo;
 import com.mongodb.MongoClient;
-import com.sun.scenario.effect.impl.prism.PrFilterContext;
 import main.domain.profile.Profile;
+import main.utils.Variables;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.BasicQuery;
-import org.springframework.data.mongodb.core.query.Criteria;
-import org.springframework.data.mongodb.core.query.Query;
 
 import java.util.List;
 
@@ -21,8 +18,15 @@ public class ProfileDao {
 
     public void insertProfile(Profile profile) {
 
-        template.insert(profile);
-
+        if (profile.getUser().getRole().equalsIgnoreCase(Variables.STUDENT)) {
+            String userId = template.findAll(Profile.class, Variables.STUDENT_COLLECTION).size() + 1 + "";
+            profile.getUser().setId(userId);
+            template.insert(profile, Variables.STUDENT_COLLECTION);
+        } else {
+            String userId = template.findAll(Profile.class, Variables.TUTOR_COLLECTION).size() + 1 + "";
+            profile.getUser().setId(userId);
+            template.insert(profile, Variables.TUTOR_COLLECTION);
+        }
     }
 
     public Profile findProfile(String profileId) {
@@ -33,7 +37,7 @@ public class ProfileDao {
     }
 
     public List<Profile> findAllProfiles() {
-        return template.findAll(Profile.class);
+        return template.findAll(Profile.class, Variables.STUDENT_COLLECTION);
     }
 
 }

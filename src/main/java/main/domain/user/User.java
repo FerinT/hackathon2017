@@ -11,12 +11,21 @@ public class User {
     private String emailAddress;
     private String school;
     private String interest;
+    private String role;
 
     // promotes them to open these accounts
-    public User(String name, String githubLink, String stackoverflowLink) {
+    public User(String name, String githubUsername, String stackoverflowLink) {
         this.name = name;
-        this.githubUsername = githubLink;
+        this.githubUsername = githubUsername;
         this.stackoverflowLink = stackoverflowLink;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 
     public String getSchool() {
