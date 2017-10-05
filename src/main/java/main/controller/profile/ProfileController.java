@@ -35,7 +35,7 @@ public class ProfileController {
     @CrossOrigin
     @RequestMapping(path = "/createProfile/student/", method = RequestMethod.POST)
     public void insertProfile(@RequestBody Profile profile) {
-        
+
     }
 
 }
