@@ -1,5 +1,10 @@
 package main.service.recentactivity;
 
+import com.google.code.stackexchange.client.StackExchangeApiClient;
+import com.google.code.stackexchange.client.query.QuestionApiQuery;
+import com.google.code.stackexchange.client.query.impl.QuestionApiQueryImpl;
+import com.google.code.stackexchange.schema.Question;
+import com.google.code.stackexchange.schema.StackExchangeSite;
 import main.domain.recentactivity.RecentActivity;
 import main.domain.user.User;
 import main.service.recentactivity.github.GithubService;
@@ -31,10 +36,20 @@ public class RecentActivityService {
 
     }
 
+    private void stackActivity(String id){
+        QuestionApiQuery questionApiQuery =  new QuestionApiQueryImpl("appId", StackExchangeSite.STACK_OVERFLOW);
+
+        for(Question q : questionApiQuery.listFeaturedQuestions()){
+            System.out.println(q.toString());
+
+        }
+    }
+
     public List<RecentActivity> getRecentActivityList(User user) throws Exception{
         recentActivityList = new LinkedList<>();
         githubActivity(user.getGithubUsername());
         // add stackoverflow
+        stackActivity("");
         return recentActivityList;
     }
 }

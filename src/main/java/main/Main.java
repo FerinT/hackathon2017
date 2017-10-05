@@ -2,9 +2,11 @@ package main;
 
 import main.domain.profile.Profile;
 import main.domain.project.Project;
+import main.domain.tipofday.TipOfTheDay;
 import main.domain.user.User;
 import main.service.profile.ProfileService;
 import main.service.project.ProjectService;
+import main.service.tipoftheday.TipOfTheDayService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -99,12 +101,40 @@ public class Main {
         profileService.insertProfile(profile6);
     }
 
+    private void insertDailyTips(){
+        TipOfTheDayService service = new TipOfTheDayService();
+
+        TipOfTheDay tipOfTheDay = new TipOfTheDay();
+        tipOfTheDay.setTheme("Docker");
+        tipOfTheDay.setTipText("Make use of Dockerfiles\n" +
+                "Deploying a Docker container can get really cumbersome because the commands are often unwieldy (and a serious challenge to remember). Instead of working from the command line, you should be making use of Dockerfiles. A Dockerfile is a short recipe that describes the files, environment, and commands that make up an image. Once you've created the Dockerfile, it can be easily used with a command like: docker build -t dockerfilename .");
+
+        tipOfTheDay = new TipOfTheDay();
+        tipOfTheDay.setTheme("Docker");
+        tipOfTheDay.setTipText("Running Docker without root (or sudo)\n" +
+                "By default, the Docker command can only be run by root or with the help of sudo. You might have users that need to run Docker, but don't have access to the root user. For that, you need to add those users to the Docker group with the following commands: sudo gpasswd -a USERNAME docker");
+
+        tipOfTheDay = new TipOfTheDay();
+        tipOfTheDay.setTheme("Docker");
+        tipOfTheDay.setTipText("Aliases\n" +
+                "Many Linux admins create their own aliases for various commands. Because some Docker commands can get a bit long (or just hard to remember), it's always best to create aliases. These aliases are added to either your ~/.bashrc or ~/.bash_aliases file and can look like:\n" +
+                "\n" +
+                "alias drm=\"docker rm\"\n" +
+                "\u200Balias dps=\"docker ps\"\n" +
+                "\u200Balias dl='docker ps -l -q'\n" +
+                "Now you only would have to remember the aliases drm, dps, and dl. A much easier route to working with Docker.");
+
+
+
+    }
+
     public static void main(String[] args) {
 //      Main main = new Main();
 //      main.insertMockData();
 //      main.insertTutors();
 //      main.insertProject();
         SpringApplication.run(Main.class, args);
+
     }
 
 }
