@@ -36,8 +36,8 @@ public class ProfileDao {
 
     }
 
-    public List<Profile> findAllProfiles() {
-        return template.findAll(Profile.class, Variables.STUDENT_COLLECTION);
+    public List<Profile> findAllProfiles(String studentCollection) {
+        return template.findAll(Profile.class, studentCollection);
     }
 
 }

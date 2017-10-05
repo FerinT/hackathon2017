@@ -3,6 +3,7 @@ package main.service.profile;
 import main.dataaccess.profile.ProfileDao;
 import main.domain.profile.Profile;
 import main.service.recentactivity.RecentActivityService;
+import main.utils.Variables;
 
 import java.util.List;
 
@@ -22,7 +23,7 @@ public class ProfileService {
 
     public List<Profile> findAllProfiles() {
 
-        return profileDao.findAllProfiles();
+        return profileDao.findAllProfiles(Variables.STUDENT_COLLECTION);
     }
 
     public Profile findProfile(String profileId) throws Exception {
@@ -31,4 +32,7 @@ public class ProfileService {
         return profile;
     }
 
+    public List<Profile> findAllTutors() {
+        return profileDao.findAllProfiles(Variables.TUTOR_COLLECTION);
+    }
 }
