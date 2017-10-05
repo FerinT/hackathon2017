@@ -32,6 +32,7 @@ targetCompatibility = 1.8
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     compile (group: 'org.springframework.boot', name: 'spring-boot-starter-data-mongodb', version: '1.2.0.RELEASE')
+    compile group: 'org.kohsuke', name: 'github-api', version: '1.89'
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
