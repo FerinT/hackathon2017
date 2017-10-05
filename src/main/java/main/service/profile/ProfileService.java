@@ -29,10 +29,12 @@ public class ProfileService {
     public Profile findProfile(String profileId) throws Exception {
         Profile profile =  profileDao.findProfile(profileId);
         profile.setRecentActivity(recentActivityService.getRecentActivityList(profile.getUser()));
+        profile.getUser().setReputationPoints(recentActivityService.calculateReputationPoints(profile.getUser().getGithubUsername()));
         return profile;
     }
 
     public List<Profile> findAllTutors() {
         return profileDao.findAllProfiles(Variables.TUTOR_COLLECTION);
     }
+
 }
