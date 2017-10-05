@@ -1,8 +1,10 @@
 package main;
 
 import main.domain.profile.Profile;
+import main.domain.project.Project;
 import main.domain.user.User;
 import main.service.profile.ProfileService;
+import main.service.project.ProjectService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -12,6 +14,30 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class Main {
+
+
+    public void insertProject(){
+        ProjectService profileService = new ProjectService();
+
+        Project project1 = new Project();
+        project1.setName("TDD");
+        project1.setDescription("Create an app using TDD (Test Driven Development)");
+        project1.setPoints("40");
+
+        Project project2 = new Project();
+        project2.setName("SOLID");
+        project2.setDescription("Demonstrate an app using all SOLID principles");
+        project2.setPoints("60");
+
+        Project project3 = new Project();
+        project3.setName("Angular 2");
+        project3.setDescription("Create an Angular app using ROUTING");
+        project3.setPoints("80");
+
+        profileService.insertProject(project1);
+        profileService.insertProject(project2);
+        profileService.insertProject(project3);
+    }
 
 
     public void insertMockData(){
@@ -74,11 +100,11 @@ public class Main {
     }
 
     public static void main(String[] args) {
-//        Main main = new Main();
-//        main.insertMockData();
-//        main.insertTutors();
+//      Main main = new Main();
+//      main.insertMockData();
+//      main.insertTutors();
+//      main.insertProject();
         SpringApplication.run(Main.class, args);
-
     }
 
 }
