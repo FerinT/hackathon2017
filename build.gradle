@@ -15,10 +15,12 @@ apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 
+/*
 jar {
-    baseName = 'gs-rest-service'
+    baseName = 'gs-rest-main.service'
     version =  '0.1.0'
 }
+*/
 
 repositories {
     mavenCentral()
@@ -32,12 +34,6 @@ dependencies {
     compile (group: 'org.springframework.boot', name: 'spring-boot-starter-data-mongodb', version: '1.2.0.RELEASE')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
-group 'com.teamaf'
-version '1.0-SNAPSHOT'
-
-apply plugin: 'java'
-
-sourceCompatibility = 1.5
 
 repositories {
     mavenCentral()
