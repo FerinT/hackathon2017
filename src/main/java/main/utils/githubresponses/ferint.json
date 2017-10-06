@@ -1,0 +1,65 @@
+{
+  "user": {
+    "userId": "1",
+    "name": "Ferin",
+    "githubUsername": "FerinT",
+    "stackoverflowLink": "6245533",
+    "emailAddress": null,
+    "school": "Milnerton High",
+    "interest": "Java, HTML, CSS",
+    "role": "Student",
+    "reputationPoints": "9",
+    "badges": [
+      "architect",
+      "graduate-developer",
+      "java"
+    ],
+    "githubAccount": {
+      "avatarUrl": "https://avatars0.githubusercontent.com/u/17495392?v=4",
+      "followers": "1",
+      "repos": "28"
+    }
+  },
+  "recentActivity": [
+    {
+      "information": "MEMBER",
+      "url": "https://github.com/FerinT/hackathon2017"
+    },
+    {
+      "information": "PUSH",
+      "url": "https://github.com/FerinT/hackathon2017"
+    },
+    {
+      "information": "PUSH",
+      "url": "https://github.com/FerinT/hackathon2017"
+    },
+    {
+      "information": "PUSH",
+      "url": "https://github.com/FerinT/hackathon2017"
+    },
+    {
+      "information": "MEMBER",
+      "url": "https://github.com/FerinT/hackathon2017"
+    },
+    {
+      "information": "PUSH",
+      "url": "https://github.com/FerinT/hackathon2017"
+    },
+    {
+      "information": "PUSH",
+      "url": "https://github.com/FerinT/hackathon2017"
+    },
+    {
+      "information": "PUSH",
+      "url": "https://github.com/FerinT/hackathon2017"
+    },
+    {
+      "information": "PUSH",
+      "url": "https://github.com/FerinT/hackathon2017"
+    },
+    {
+      "information": "PUSH",
+      "url": "https://github.com/FerinT/hackathon2017"
+    }
+  ]
+}

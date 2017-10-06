@@ -7,8 +7,11 @@ import main.domain.user.User;
 import main.service.profile.ProfileService;
 import main.service.project.ProjectService;
 import main.service.tipoftheday.TipOfTheDayService;
+import main.utils.Variables;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import java.util.ArrayList;
 
 /**
  * Created by tayfer01 on 10/5/2017.
@@ -25,16 +28,19 @@ public class Main {
         project1.setName("TDD");
         project1.setDescription("Create an app using TDD (Test Driven Development)");
         project1.setPoints("40");
+        project1.setInstructions("1. Create a Github repo called TDD_activity\n2. For every class you create create there should be a test\n3. You are to submit a test coverage report\n4. Goodluck");
 
         Project project2 = new Project();
         project2.setName("SOLID");
         project2.setDescription("Demonstrate an app using all SOLID principles");
         project2.setPoints("60");
+        project2.setInstructions("1. Create a Github repo called SOLID_activity\n2. You are to create a program that demonstrates the usage ALL SOLID principles\n3. You are to submit a test coverage report\n4. Goodluck");
 
         Project project3 = new Project();
         project3.setName("Angular 2");
         project3.setDescription("Create an Angular app using ROUTING");
         project3.setPoints("80");
+        project3.setInstructions("1. Create a Github repo called ROUTING_activity\n2. Create a program that shows at least 4 routing paths\n3. You are to submit a test coverage report\n4. Goodluck");
 
         profileService.insertProject(project1);
         profileService.insertProject(project2);
@@ -42,30 +48,41 @@ public class Main {
     }
 
 
-    public void insertMockData(){
+    public void insertStudents(){
         ProfileService profileService = new ProfileService();
+
 
         User user1 = new User("Ferin", "FerinT", "6245533" );
         user1.setInterest("Java, HTML, CSS");
         user1.setSchool("Milnerton High");
         user1.setRole("Student");
+        user1.getBadges().add(Variables.ARCHITECT);
+        user1.getBadges().add(Variables.GRADUATE_DEVELOPER);
+        user1.getBadges().add(Variables.JAVA);
 
-        User user2 = new User("Brandon", "BrandonMay693", "6245533" );
+        User user2 = new User("Brandon", "BrandonMay693", "6666423" );
         user2.setInterest("Java, HTML, Big Data");
         user2.setSchool("Milnerton High");
         user2.setRole("Student");
+        user2.getBadges().add(Variables.GRADUATE_DEVELOPER);
+        user2.getBadges().add(Variables.DOCKER);
 
-        User user3 = new User("Twaha", "Twahatnz", "6245533" );
+        User user3 = new User("Twaha", "Twahanz", "6049869" );
         user3.setInterest("C++, NLP, CSS");
         user3.setSchool("Milnerton High");
         user3.setRole("Student");
+        user3.getBadges().add(Variables.ARCHITECT);
+        user3.getBadges().add(Variables.INTERMEDIATE_DEVELOPER);
+        user3.getBadges().add(Variables.PRINCIPLE_ARCHITECT);
 
-        User user4 = new User("Luke", "LukeKram", "6245533" );
+        User user4 = new User("Luke", "LukeKramer", "8731304" );
         user4.setInterest("Java, HTML, CSS");
         user4.setSchool("Milnerton High");
         user4.setRole("Student");
+        user4.getBadges().add(Variables.DTM);
+        user4.getBadges().add(Variables.SENIOR_DEVELOPER);
 
-        User user5 = new User("Shiraaz", "Shiraazm", "6245533" );
+        User user5 = new User("Shiraaz", "ShiraazMoollatjie", "6245533" );
         user5.setInterest("Machine learning, HTML");
         user5.setRole("Architect");
 
@@ -88,7 +105,7 @@ public class Main {
 
         User user5 = new User("Stellasie", "Shiraazm", "6245533" );
         user5.setInterest("Java, Continuous Integration");
-        user5.setRole("Tutor");
+        user5.setRole(Variables.SENIOR_DEVELOPER);
 
         Profile profile5 = new Profile(user5);
         profileService.insertProfile(profile5);
@@ -132,12 +149,12 @@ public class Main {
     }
 
     public static void main(String[] args) {
-//      Main main = new Main();
-//      main.insertMockData();
-//      main.insertTutors();
-//      main.insertProject();
-//        main.insertDailyTips();
-        SpringApplication.run(Main.class, args);
+/*      Main main = new Main();
+      main.insertStudents();
+      main.insertTutors();
+      main.insertProject();
+      main.insertDailyTips();*/
+      SpringApplication.run(Main.class, args);
 
     }
 

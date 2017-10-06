@@ -9,6 +9,7 @@ public class Project {
     String name;
     String description;
     String points;
+    String instructions;
 
     public Project() {
     }
@@ -48,5 +49,13 @@ public class Project {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getInstructions() {
+        return instructions;
+    }
+
+    public void setInstructions(String instructions) {
+        this.instructions = instructions;
     }
 }

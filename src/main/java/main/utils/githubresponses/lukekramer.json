@@ -1,0 +1,39 @@
+{
+  "user": {
+    "userId": "4",
+    "name": "Luke",
+    "githubUsername": "LukeKramer",
+    "stackoverflowLink": "8731304",
+    "emailAddress": null,
+    "school": "Milnerton High",
+    "interest": "Java, HTML, CSS",
+    "role": "Student",
+    "reputationPoints": "7",
+    "badges": [
+      "d-t-m",
+      "senior-developer"
+    ],
+    "githubAccount": {
+      "avatarUrl": "https://avatars1.githubusercontent.com/u/17453800?v=4",
+      "followers": "2",
+      "repos": "24"
+    }
+  },
+  "recentActivity": [
+    {
+      "information": "PUSH",
+      "url": "https://github.com/ShiraazMoollatjie/outreachaf-frontend",
+      "displayText": "PUSH event occurred on the following repository."
+    },
+    {
+      "information": "PUSH",
+      "url": "https://github.com/ShiraazMoollatjie/outreachaf-frontend",
+      "displayText": "PUSH event occurred on the following repository."
+    },
+    {
+      "information": "PUSH",
+      "url": "https://github.com/ShiraazMoollatjie/outreachaf-frontend",
+      "displayText": "PUSH event occurred on the following repository."
+    }
+  ]
+}

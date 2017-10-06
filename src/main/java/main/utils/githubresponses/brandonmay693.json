@@ -1,0 +1,44 @@
+{
+  "user": {
+    "userId": "2",
+    "name": "Brandon",
+    "githubUsername": "BrandonMay693",
+    "stackoverflowLink": "6245533",
+    "emailAddress": null,
+    "school": "Milnerton High",
+    "interest": "Java, HTML, Big Data",
+    "role": "Student",
+    "reputationPoints": "6",
+    "badges": [
+      "graduate-developer",
+      "docker"
+    ],
+    "githubAccount": {
+      "avatarUrl": "https://avatars3.githubusercontent.com/u/17469379?v=4",
+      "followers": "0",
+      "repos": "12"
+    }
+  },
+  "recentActivity": [
+    {
+      "information": "PUSH",
+      "url": "https://github.com/FerinT/hackathon2017",
+      "displayText": "PUSH event occurred on the following repository."
+    },
+    {
+      "information": "CREATE",
+      "url": "https://github.com/brandonmay693/Lunch-Finder",
+      "displayText": "CREATE event occurred on the following repository."
+    },
+    {
+      "information": "CREATE",
+      "url": "https://github.com/brandonmay693/RetirementGoals",
+      "displayText": "CREATE event occurred on the following repository."
+    },
+    {
+      "information": "CREATE",
+      "url": "https://github.com/brandonmay693/RetirementGoals",
+      "displayText": "CREATE event occurred on the following repository."
+    }
+  ]
+}

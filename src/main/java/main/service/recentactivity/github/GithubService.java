@@ -1,5 +1,6 @@
 package main.service.recentactivity.github;
 
+import main.domain.recentactivity.GithubAccount;
 import org.kohsuke.github.GHEventInfo;
 import org.kohsuke.github.GHUser;
 import org.kohsuke.github.GitHub;
@@ -14,9 +15,11 @@ public class GithubService {
 
     private GHUser ghUser;
     private GitHub github;
+    private GithubAccount githubAccount;
+
 
     public List<GHEventInfo> getActivity(String username) throws IOException {
-        github = GitHub.connectAnonymously();
+        github = GitHub.connectUsingPassword("ferint", "newpassword1");
         ghUser = github.getUser(username);
 
         if (ghUser.listEvents().asList().size() > 10)
@@ -25,4 +28,15 @@ public class GithubService {
             return ghUser.listEvents().asList();
     }
 
+    public GithubAccount getGhUser(String username) throws Exception{
+        githubAccount = new GithubAccount();
+        github = GitHub.connectUsingPassword("ferint", "newpassword1");
+        ghUser = github.getUser(username);
+
+        githubAccount.setFollowers(ghUser.getFollowersCount() + "");
+        githubAccount.setAvatarUrl(ghUser.getAvatarUrl());
+        githubAccount.setRepos(ghUser.getRepositories().size() + "");
+
+        return githubAccount;
+    }
 }

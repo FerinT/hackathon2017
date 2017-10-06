@@ -1,5 +1,13 @@
 package main.domain.user;
 
+
+
+import main.domain.recentactivity.GithubAccount;
+import org.kohsuke.github.GHUser;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by tayfer01 on 10/5/2017.
  */
@@ -13,12 +21,31 @@ public class User {
     private String interest;
     private String role;
     private String reputationPoints;
+    private List<String> badges = new ArrayList<>();
+    private GithubAccount githubAccount;
+
 
     // promotes them to open these accounts
     public User(String name, String githubUsername, String stackoverflowLink) {
         this.name = name;
         this.githubUsername = githubUsername;
         this.stackoverflowLink = stackoverflowLink;
+    }
+
+    public GithubAccount getGithubAccount() {
+        return githubAccount;
+    }
+
+    public void setGithubAccount(GithubAccount githubAccount) {
+        this.githubAccount = githubAccount;
+    }
+
+    public List<String> getBadges() {
+        return badges;
+    }
+
+    public void setBadges(List<String> badges) {
+        this.badges = badges;
     }
 
     public String getReputationPoints() {

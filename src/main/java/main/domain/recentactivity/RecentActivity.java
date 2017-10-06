@@ -7,11 +7,20 @@ public class RecentActivity {
 
     private String information;
     private String url;
+    private String displayText;
 
-
-    public RecentActivity(String information, String url) {
+    public RecentActivity(String information, String url, String displayText) {
         this.information = information;
         this.url = url;
+        this.displayText = displayText;
+    }
+
+    public String getDisplayText() {
+        return displayText;
+    }
+
+    public void setDisplayText(String displayText) {
+        this.displayText = displayText;
     }
 
     public String getInformation() {

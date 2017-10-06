@@ -1,0 +1,50 @@
+{
+  "user": {
+    "userId": "3",
+    "name": "Twaha",
+    "githubUsername": "Twahanz",
+    "stackoverflowLink": "6049869",
+    "emailAddress": null,
+    "school": "Milnerton High",
+    "interest": "C++, NLP, CSS",
+    "role": "Student",
+    "reputationPoints": "6",
+    "badges": [
+      "architect",
+      "intermediate-developer",
+      "principle-architect"
+    ],
+    "githubAccount": {
+      "avatarUrl": "https://avatars2.githubusercontent.com/u/17453855?v=4",
+      "followers": "4",
+      "repos": "36"
+    }
+  },
+  "recentActivity": [
+    {
+      "information": "PUSH",
+      "url": "https://github.com/ShiraazMoollatjie/outreachaf-frontend",
+      "displayText": "PUSH event occurred on the following repository."
+    },
+    {
+      "information": "PUSH",
+      "url": "https://github.com/ShiraazMoollatjie/outreachaf-frontend",
+      "displayText": "PUSH event occurred on the following repository."
+    },
+    {
+      "information": "PUSH",
+      "url": "https://github.com/ShiraazMoollatjie/outreachaf-frontend",
+      "displayText": "PUSH event occurred on the following repository."
+    },
+    {
+      "information": "PUSH",
+      "url": "https://github.com/ShiraazMoollatjie/outreachaf-frontend",
+      "displayText": "PUSH event occurred on the following repository."
+    },
+    {
+      "information": "PUSH",
+      "url": "https://github.com/ShiraazMoollatjie/outreachaf-frontend",
+      "displayText": "PUSH event occurred on the following repository."
+    }
+  ]
+}

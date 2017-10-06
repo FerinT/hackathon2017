@@ -2,6 +2,7 @@ package main.domain.profile;
 
 import main.domain.recentactivity.RecentActivity;
 import main.domain.user.User;
+import org.kohsuke.github.GHUser;
 
 import java.util.List;
 
@@ -11,6 +12,7 @@ import java.util.List;
 public class Profile {
     private User user;
     private List<RecentActivity> recentActivity;
+
 
     public Profile(User user) {
         this.user = user;
@@ -31,4 +33,5 @@ public class Profile {
     public void setRecentActivity(List<RecentActivity> recentActivity) {
         this.recentActivity = recentActivity;
     }
+
 }

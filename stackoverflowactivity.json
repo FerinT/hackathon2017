@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "reputation_history_type": "answer_unaccepted",
+      "reputation_change": -15,
+      "post_id": 36849437,
+      "creation_date": 1461667375,
+      "user_id": 6245533
+    },
+    {
+      "reputation_history_type": "post_downvoted",
+      "reputation_change": 0,
+      "post_id": 36850048,
+      "creation_date": 1461615057,
+      "user_id": 6245533
+    },
+    {
+      "reputation_history_type": "post_downvoted",
+      "reputation_change": 0,
+      "post_id": 36849437,
+      "creation_date": 1461614759,
+      "user_id": 6245533
+    },
+    {
+      "reputation_history_type": "answer_accepted",
+      "reputation_change": 15,
+      "post_id": 36849437,
+      "creation_date": 1461613610,
+      "user_id": 6245533
+    }
+  ]
+}
